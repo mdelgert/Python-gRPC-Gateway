@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+// The request message.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message.
+message HelloResponse {
+  string name = 1;
+  string msg = 2;
+}
+// The hellos service definition.
+service Hellos {
+  // Returns response.
+  rpc GetHello (HelloRequest) returns (HelloResponse) {}
+}
